@@ -76,7 +76,18 @@ public partial class InvestmentAnalysis : System.Web.UI.Page
         monthlyRent = numberOfUnits * rentPerUnit;
         monthly_rent.Text = monthlyRent.ToString("C2");
 
+        monthlyPL = monthlyRent + totalMonthlyCost;
+        annualPL = monthlyPL * 12.0;
+        cashReturn = monthlyRent * 12.0 / salesPrice;
+        totalCapital = downpaymentValue + closingCost;
+        breakevenYears = totalCapital / annualPL;
+        ROE = annualPL / totalCapital;
 
-
+        monthly_pl.Text = monthlyPL.ToString("C2");
+        annual_pl.Text = annualPL.ToString("C2");
+        cash_return.Text = cashReturn.ToString("P");
+        roe_.Text = ROE.ToString("P");
+        breakeven_years.Text = breakevenYears.ToString("G3");
+        total_capital.Text = totalCapital.ToString("C2");
     }
 }
