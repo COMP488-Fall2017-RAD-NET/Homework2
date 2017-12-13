@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <h2>Investment Property Analysis</h2>
     <div style="width: 50%">
+        <h4>General:</h4>
         <p>
             <asp:Label ID="sales_price_label" runat="server" Text="Sales price"></asp:Label>
             <input id="sales_price_input" type="number" runat="server" style="float: right" />
@@ -25,7 +26,7 @@
         </p>
         <p>
             <asp:Label ID="closing_cost_label" runat="server" Text="Closing Cost (5%)"></asp:Label>
-            <asp:TextBox ID="closing_cost" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray"></asp:TextBox>
+            <input id="closing_cost" type="number" runat="server" style="float: right" />
         </p>
         <h4>Loan Terms:</h4>
         <p>
@@ -43,6 +44,48 @@
         <p>
             <asp:Label ID="monthly_payment_label" runat="server" Text="Monthly Payment"></asp:Label>
             <asp:TextBox ID="monthly_payment" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray"></asp:TextBox>
+        </p>
+        <h4>Expenses:</h4>
+        <p>
+            <asp:Label ID="yearly_tax_rate_label" runat="server" Text="Yearly Tax Rate"></asp:Label>
+            <input id="yearly_tax_rate" type="number" runat="server" style="float: right" />
+        </p>
+        <p>
+            <asp:Label ID="yearly_insurance_rate_label" runat="server" Text="Yearly Insurance Rate"></asp:Label>
+            <input id="yearly_insurance_rate" type="number" runat="server" style="float: right" />
+        </p>
+        <p>
+            <asp:Label ID="monthly_taxes_label" runat="server" Text="Monthly Taxes"></asp:Label>
+            <asp:TextBox ID="monthly_taxes" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Label ID="monthly_insurance_pmt_label" runat="server" Text="Monthly Insurance Pmt"></asp:Label>
+            <asp:TextBox ID="monthly_insurance_pmt" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Label ID="monthly_maintenance_label" runat="server" Text="Monthly Maintenance"></asp:Label>
+            <input id="monthly_maintenance" type="number" runat="server" style="float: right" />
+        </p>
+        <p>
+            <asp:Label ID="other_expense_label" runat="server" Text="Other Expense"></asp:Label>
+            <input id="other_expense" type="number" runat="server" style="float: right" />
+        </p>
+        <br />
+        <p>
+            <asp:Label ID="total_monthly_cost_label" runat="server" Text="Total Monthly Cost" Font-Bold="true"></asp:Label>
+            <asp:TextBox ID="total_monthly_cost" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray" Font-Bold="true"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Label ID="number_of_units_label" runat="server" Text="Number of Units"></asp:Label>
+            <input id="number_of_units" type="number" runat="server" style="float: right" />
+        </p>
+        <p>
+            <asp:Label ID="rent_per_unit_label" runat="server" Text="Rent per Unit"></asp:Label>
+            <input id="rent_per_unit" type="number" runat="server" style="float: right" />
+        </p>
+        <p>
+            <asp:Label ID="monthly_rent_label" runat="server" Text="Monthly Rent" Font-Bold="true"></asp:Label>
+            <asp:TextBox ID="monthly_rent" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray" Font-Bold="true"></asp:TextBox>
         </p>
     </div>
     <asp:Button ID="calculate_button" runat="server" Text="Calculate" OnClick="calculate_button_Click" UseSubmitBehavior="false" ClientIDMode="Static"/>
