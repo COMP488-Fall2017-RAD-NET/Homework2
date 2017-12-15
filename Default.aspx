@@ -25,11 +25,11 @@
             <asp:TextBox ID="first_lien_balance" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="closing_cost_label" runat="server" Text="Closing Cost (5%)"></asp:Label>
+            <asp:Label ID="closing_cost_label" runat="server" Text="Closing Cost"></asp:Label>
             <input id="closing_cost" type="number" runat="server" style="float: right" />
         </p>
         <br />
-        <h4>Loan Terms:</h4>
+        <h4>Loan Conditions:</h4>
         <p>
             <asp:Label ID="loan_interest_rate_label" runat="server" Text="Interest Rate"></asp:Label>
             <input id="loan_interest_rate_input" type="number" runat="server" style="float: right" />
@@ -92,7 +92,9 @@
             <asp:TextBox ID="monthly_rent" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray" Font-Bold="true"></asp:TextBox>
         </p>
         <br />
-        <h4>Rental Investment Statistics - Pretax</h4>
+        <h4>Rental Investment Statistics - Pretax 
+             <asp:Label ID="mortgage_label" runat="server" Text=""></asp:Label>
+        </h4>
         <p>
             <asp:Label ID="monthly_pl_label" runat="server" Text="Monthly P&L" Font-Bold="true"></asp:Label>
             <asp:TextBox ID="monthly_pl" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray" Font-Bold="true"></asp:TextBox>
@@ -118,6 +120,17 @@
             <asp:TextBox ID="total_capital" runat="server" ClientIDMode="Static" ReadOnly="true" Style="float: right; background-color: lightgray" Font-Bold="true"></asp:TextBox>
         </p>
     </div>
-    <asp:Button ID="calculate_button" runat="server" Text="Calculate" OnClick="calculate_button_Click" UseSubmitBehavior="false" ClientIDMode="Static" />
-    
+    <div>
+        <asp:Button ID="calculate_button" runat="server" Text="Calculate" OnClick="calculate_button_Click" UseSubmitBehavior="false" ClientIDMode="Static" Font-Bold="True" Font-Size="X-Large"/>
+    </div>
+    <div>
+        <br />
+    </div>
+    <div style="font-weight:700; color:red">
+        <p>Disclaimers:</p>
+        <p>This tool is for information purposes only.</p>
+        <p>Please use only numbers for the input values. No format exceptions are handled in the code.</p>
+        <p>All input fields must be filled out. No error-checking in the code.</p>
+    </div>
+
 </asp:Content>

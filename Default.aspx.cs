@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using Microsoft.VisualBasic;
 
 
@@ -89,6 +85,7 @@ public partial class _Default : Page
         breakevenYears = totalCapital / annualPL;
         ROE = annualPL / totalCapital;
 
+        mortgage_label.Text = String.Format("{0}-YR Mortgage", (loanTerm / 12.0).ToString("G3"));
         monthly_pl.Text = monthlyPL.ToString("C2");
         annual_pl.Text = annualPL.ToString("C2");
         cash_return.Text = cashReturn.ToString("P");
